@@ -1,0 +1,46 @@
+Parameter options:
+choose dataset:
+  --1 option CICIDS2017_sample.csv
+
+Choose features:
+  --pick feature importance (default .9)
+    --will retrain model on selected features and use those results
+  --or select individual features
+  --or select all features
+
+SMOTE options:
+  --write dictionary of smote values
+  --default - {
+	4: 1500
+	}
+Choose model type:
+  --decision tree
+  --random forest
+  --extra trees
+  --XGBoost
+    --n-estimators
+      --default is 10
+  --stacking
+    --if you choose stacking you get to pick which ones you want stacked. Default is all
+    --decision tree
+    --random forest
+    --extra trees
+    --XGBoost
+
+result: dict
+  --accuracy: string
+  --precision: string
+  --recall: string
+  --F1-score: string
+  --classification_report: string
+  --top three features:dict
+     --overall: []
+     --per-attack: dict
+       --Dos: []
+       --Port-Scan: []
+       --Brute-Force: []
+       --Web-Attack: []
+       --Botnet: []
+       --Infiltration: []
+
+**Look into CAN-intrustion dataset
