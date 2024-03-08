@@ -1,5 +1,0 @@
-imbalanced-learn==0.8.0
-scikit-learn==0.24.2
-xgboost==1.4.2
-lightgbm==3.2.1
-catboost==0.26

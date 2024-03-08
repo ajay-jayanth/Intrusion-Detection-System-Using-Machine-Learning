@@ -18,7 +18,7 @@ config = {
     "features": {
         #deafult to 1.0, paper uses .9. This value removes features until we only use the top 
         #"feature-trimming" features in our model
-        "feature_trimming": .9
+        "feature_trimming": 1.0
     },
     #default to this value, if not using SMOTE have empty dictionary
     "SMOTE":{
@@ -28,7 +28,7 @@ config = {
     },
     #possible model_type values are ["decision tree", "random forest","extra trees", "XGBoost"]
     #is list of the model types user want to use, if multiple models it returns the stacking results
-    "model_types": ["decision tree", "random forest","extra trees", "XGBoost"],
+    "model_types": ["XGBoost"],
 
     #only have to give this a value if "XGBoost" is in "model_types"
     "XGBoost_params":{
