@@ -14,7 +14,7 @@ from sklearn.tree import DecisionTreeClassifier
 import xgboost as xgb
 from xgboost import plot_importance
 
-df = pd.read_csv('CICIDS2017_sample.csv') 
+df = pd.read_csv('./data/CICIDS2017_sample.csv') 
 
 # Z-score normalization
 features = df.dtypes[df.dtypes != 'object'].index
@@ -64,7 +64,7 @@ result.to_csv('CICIDS2017_sample_km.csv',index=0)
 
 
 # Read the sampled dataset
-df=pd.read_csv('CICIDS2017_sample_km.csv')
+df=pd.read_csv('./data/CICIDS2017_sample_km.csv')
 
 X = df.drop(['Label'],axis=1).values
 y = df.iloc[:, -1].values.reshape(-1,1)
